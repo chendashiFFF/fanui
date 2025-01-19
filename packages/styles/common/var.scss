@@ -1,0 +1,43 @@
+// 定义颜色变量
+$colors: (
+  'primary': #409eff,
+  'success': #67c23a,
+  'warning': #e6a23c,
+  'danger': #f56c6c,
+  'info': #909399
+);
+
+// 生成CSS变量
+:root {
+  // 基础按钮颜色
+  --fan-button-text-color: #606266;
+  --fan-button-bg-color: #ffffff;
+  --fan-button-border-color: #dcdfe6;
+  --fan-white: #ffffff;
+  --fan-button-hover-bg-color: #f5f7fa;
+  
+  // 动态生成各种类型的颜色变量
+  @each $type, $color in $colors {
+    --fan-#{$type}-color: #{$color};
+    // hover时颜色加深（使用黑色混合）
+    --fan-#{$type}-hover-color: #{mix($color, #fff, 70%)};
+    // light状态颜色变浅（使用白色混合）
+    --fan-#{$type}-light-color: #{mix($color, #fff, 10%)};
+  }
+}
+
+// 暗黑主题
+html.dark {
+  --fan-button-text-color: #c0c4cc;
+  --fan-button-bg-color: #363636;
+  --fan-button-border-color: #4c4c4c;
+  --fan-button-hover-bg-color: #424242;
+  
+  @each $type, $color in $colors {
+    --fan-#{$type}-color: #{$color};
+    // 暗黑模式下的hover效果
+    --fan-#{$type}-hover-color: #{mix($color, #000, 85%)};
+    // 暗黑模式下的light效果
+    --fan-#{$type}-light-color: #{mix($color, #000, 20%)};
+  }
+}
