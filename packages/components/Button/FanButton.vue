@@ -59,27 +59,27 @@ export default defineComponent({
     const typeClasses = computed(() => {
       const classes = {
         primary: props.plain 
-          ? 'bg-primary-light text-primary border-primary hover:bg-primary-hover hover:text-white' 
-          : 'bg-primary text-white border-primary hover:bg-primary-hover active:bg-primary-active focus:ring-primary/50',
+          ? 'bg-primary-light text-primary border-primary hover:bg-primary-hover hover:text-white focus:border-primary-focus focus:ring-primary-focus/50' 
+          : 'bg-primary text-white border-primary hover:bg-primary-hover active:bg-primary-active focus:border-primary-focus focus:ring-primary-focus/50',
         success: props.plain 
-          ? 'bg-success-light text-success border-success hover:bg-success-hover hover:text-white' 
-          : 'bg-success text-white border-success hover:bg-success-hover active:bg-success-active focus:ring-success/50',
+          ? 'bg-success-light text-success border-success hover:bg-success-hover hover:text-white focus:border-success-focus focus:ring-success-focus/50' 
+          : 'bg-success text-white border-success hover:bg-success-hover active:bg-success-active focus:border-success-focus focus:ring-success-focus/50',
         warning: props.plain 
-          ? 'bg-warning-light text-warning border-warning hover:bg-warning-hover hover:text-white' 
-          : 'bg-warning text-white border-warning hover:bg-warning-hover active:bg-warning-active focus:ring-warning/50',
+          ? 'bg-warning-light text-warning border-warning hover:bg-warning-hover hover:text-white focus:border-warning-focus focus:ring-warning-focus/50' 
+          : 'bg-warning text-white border-warning hover:bg-warning-hover active:bg-warning-active focus:border-warning-focus focus:ring-warning-focus/50',
         danger: props.plain 
-          ? 'bg-danger-light text-danger border-danger hover:bg-danger-hover hover:text-white' 
-          : 'bg-danger text-white border-danger hover:bg-danger-hover active:bg-danger-active focus:ring-danger/50',
+          ? 'bg-danger-light text-danger border-danger hover:bg-danger-hover hover:text-white focus:border-danger-focus focus:ring-danger-focus/50' 
+          : 'bg-danger text-white border-danger hover:bg-danger-hover active:bg-danger-active focus:border-danger-focus focus:ring-danger-focus/50',
         info: props.plain 
-          ? 'bg-info-light text-info border-info hover:bg-info-hover hover:text-white' 
-          : 'bg-info text-white border-info hover:bg-info-hover active:bg-info-active focus:ring-info/50',
-        text: 'border-transparent bg-transparent text-primary hover:bg-gray-100 focus:ring-primary/50'
+          ? 'bg-info-light text-info border-info hover:bg-info-hover hover:text-white focus:border-info-focus focus:ring-info-focus/50' 
+          : 'bg-info text-white border-info hover:bg-info-hover active:bg-info-active focus:border-info-focus focus:ring-info-focus/50',
+        text: 'border-transparent bg-transparent text-primary hover:bg-gray-100 focus:ring-primary-focus/50'
       }
       return props.type 
         ? classes[props.type] 
         : props.plain 
-          ? 'bg-gray-50 border-gray-300 text-gray-700 hover:border-primary hover:text-primary' 
-          : 'border-gray-300 bg-white text-gray-700 hover:bg-gray-50 focus:ring-primary/50'
+          ? 'bg-gray-50 border-gray-300 text-gray-700 hover:border-primary hover:text-primary focus:border-primary-focus focus:ring-primary-focus/50' 
+          : 'border-gray-300 bg-white text-gray-700 hover:bg-gray-50 focus:border-primary-focus focus:ring-primary-focus/50'
     })
 
     const sizeClasses = computed(() => {
